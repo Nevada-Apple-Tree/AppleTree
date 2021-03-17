@@ -1,4 +1,4 @@
-# AppleTrees
+# AppleTree
 Family Tree connection app
 Original App Design Project - README Template
 ===
