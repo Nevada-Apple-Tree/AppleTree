@@ -88,14 +88,28 @@ A family tree app. The user can begin their tree with parents and children accou
 Posting/ Chat View
 | Property     | Type     | Description                                      |
 |--------------|----------|--------------------------------------------------|
-| Author       | User     | image author                                     |
+| userAccount  | String   | User profile                                     |
+| Author       | user     | image author                                     |
 | createdDate  | DateTime | date when post is created(default field)         |
 | createdTime  | DateTime | Time when post is created                        |
 | messageField | string   | Chat for user typing                             |
 | image        | File     | User can post file saved photos or take new ones |
 | caption      | String   | Comment on user image                            |
 
+Mapping
+| Property   | Type          | Description                         |
+|------------|---------------|-------------------------------------|
+| mappedUser | User          | Shows location of app user on a map |
+| placedPin  | String:Double | Place notifications/ hotspots       |
+| Time       | DateTime      | Shows current time                  |
 
+Gallery
+| Property         | Type     | Description                                            |
+|------------------|----------|--------------------------------------------------------|
+| cameraOnTap      | NSObject | User can access their phone camera to take new picture |
+| imageScreenshots | File     | Accesses users saved screenshots                       |
+| imageGallery     | File     | Accesses users saved images in gallery                 |
+| imageDownloads   | File     | Accesses users downloaded images                       |
 
 ### Networking
 - [Add list of network requests by screen ]
