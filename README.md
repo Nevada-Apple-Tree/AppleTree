@@ -120,7 +120,7 @@ Mapping
 
 ### Networking
 - (Create/post) Create user account
-  
+  ```swift
    let user = PFUser()
    
    user.username = usernameField.text
@@ -135,7 +135,7 @@ Mapping
        } else {
           //print error
           }
-  
+  ```
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
 
