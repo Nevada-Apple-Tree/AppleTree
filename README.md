@@ -93,7 +93,7 @@ Posting/ Chat View
 | createdTime  | DateTime | Time when post is created                        |
 | messageField | string   | Chat for user typing                             |
 | image        | File     | User can post file saved photos or take new ones |
-
+| caption      | String   | Comment on user image                            |
 
 
 
