@@ -85,8 +85,18 @@ A family tree app. The user can begin their tree with parents and children accou
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-|First Header|Second Header|
-----------------------------
+Posting/ Chat View
+| Property     | Type     | Description                                      |
+|--------------|----------|--------------------------------------------------|
+| Author       | User     | image author                                     |
+| createdDate  | DateTime | date when post is created(default field)         |
+| createdTime  | DateTime | Time when post is created                        |
+| messageField | string   | Chat for user typing                             |
+| image        | File     | User can post file saved photos or take new ones |
+
+
+
+
 |Content 1|Content 2|
 ### Networking
 - [Add list of network requests by screen ]
