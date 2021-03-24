@@ -122,8 +122,19 @@ Mapping
 - (Create/post) Create user account
   
    let user = PFUser()
+   
    user.username = usernameField.text
+   
    user.password = passwordField.text
+   
+   user["userImage"] = UIImage(named: "defaultUserImage")
+   
+   user.signUpInBackground{ (success, error) in
+   if success {
+       // Got to home feed
+       } else {
+          //print error
+          }
   
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
