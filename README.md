@@ -85,31 +85,38 @@ A family tree app. The user can begin their tree with parents and children accou
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-Posting/ Chat View
-| Property     | Type     | Description                                      |
-|--------------|----------|--------------------------------------------------|
-| userAccount  | String   | User profile                                     |
-| Author       | user     | image author                                     |
-| createdDate  | DateTime | date when post is created(default field)         |
-| createdTime  | DateTime | Time when post is created                        |
-| messageField | string   | Chat for user typing                             |
-| image        | File     | User can post file saved photos or take new ones |
-| caption      | String   | Comment on user image                            |
+Posting
+| Property     | Type             | Description                                      |
+|--------------|------------------|--------------------------------------------------|
+| userAccount  | pointer to user  | Current Username                                 |
+| Author       | pointer to user  | Current user image                               |
+| createdDate  | DateTime         | date when post is created(default field)         |
+| createdTime  | DateTime         | Time when post is created(default field)         |
+| messageField | string           | Chat for user typing                             |
+| image        | File             | User can post file saved photos or take new ones |
+| caption      | String           | Comment on user image                            |
+
+User
+| Property        | Type    | Description                     |
+|-----------------|---------|---------------------------------|
+| userName        | String  | Show username                   |
+| accountPassword | String  | Holds account password          |
+| isUserShow      | boolean | If user wants to show on map    |
+| treeId          | String  | Group code for family tree      |
+| userImage       | File    | User profile image/ placeholder |
+
+Images
+| Property      | Type   | Description                     |
+|---------------|--------|---------------------------------|
+| image         | File   | Image to be stored              |
+| imageCategory | String | To identify the types of images |
 
 Mapping
-| Property   | Type          | Description                         |
-|------------|---------------|-------------------------------------|
-| mappedUser | User          | Shows location of app user on a map |
-| placedPin  | String:Double | Place notifications/ hotspots       |
-| Time       | DateTime      | Shows current time                  |
-
-Gallery
-| Property         | Type     | Description                                            |
-|------------------|----------|--------------------------------------------------------|
-| cameraOnTap      | NSObject | User can access their phone camera to take new picture |
-| imageScreenshots | File     | Accesses users saved screenshots                       |
-| imageGallery     | File     | Accesses users saved images in gallery                 |
-| imageDownloads   | File     | Accesses users downloaded images                       |
+| Property   | Type                     | Description                         |
+|------------|--------------------------|-------------------------------------|
+| mappedUser | Pointer to User          | Shows location of app user on a map |
+| placedPin  | GeoLocation              | Place notifications/ hotspots       |
+| createdAt  | DateTime                 | Shows current time                  |
 
 ### Networking
 - [Add list of network requests by screen ]
