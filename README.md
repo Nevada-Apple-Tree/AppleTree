@@ -137,6 +137,57 @@ Mapping
           }
   ```
 - (Create/post) Comment
+  ```swift
+      func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
+
+        // Create the comment
+
+        let comment = PFObject(className: "Comments")
+
+        comment["text"] = text
+
+        comment["post"] = selectedPost
+
+        comment["author"] = PFUser.current()!
+
+        
+
+        selectedPost.add(comment, forKey: "comments")
+
+        
+
+        selectedPost.saveInBackground { (success, error) in
+
+            if success {
+
+                print("Comment saved")
+
+            } else {
+
+                print("Error saving comment")
+
+            }
+
+        }
+
+        tableView.reloadData()
+
+        
+
+        // Clear and dismiss the input bar
+
+        commentBar.inputTextView.text = nil
+
+        
+
+        showsCommentBar = false
+
+        becomeFirstResponder()
+
+        commentBar.inputTextView.resignFirstResponder()
+
+    }
+  ```
 - (Update/put) Change user image
   ```swift
   @IBAction func onCameraButton(_ sender: Any){
