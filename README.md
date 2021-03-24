@@ -119,7 +119,11 @@ Mapping
 | createdAt  | DateTime                 | Shows current time                  |
 
 ### Networking
-- [Add list of network requests by screen ]
+- (Create/post) Create user account
+  let user = PFUser()
+  user.username = usernameField.text
+  user.password = passwordField.text
+  
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
 
