@@ -97,7 +97,6 @@ Posting/ Chat View
 
 
 
-|Content 1|Content 2|
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
