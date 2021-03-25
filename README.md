@@ -195,6 +195,19 @@ Mapping
     }
 
   ```
+  (Create/ post) posting to chat feed
+  ~~~swift
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: indexPath) -> UITableViewCell {
+  let post  = posts[indexPath.section]
+  if indexPath.row == 0 {
+  let cell = tableView.dequeueReusableCell(withIdentifier: "feedContent") as! PostCell
+  let user = post["author"] as! PFUser
+  cell.usernameLabel.text = user.username
+  let imageFile = post["image"] as! PFFileObject
+  return cell
+  }
+  
+  ~~~
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
 
