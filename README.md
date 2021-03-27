@@ -210,7 +210,7 @@ Mapping
   
   (Read/ Get) Pull images
   ~~~swift
-  @IBAction func onCameraButton(_ sender: Any) {
+  @IBAction func onGallery(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = true
