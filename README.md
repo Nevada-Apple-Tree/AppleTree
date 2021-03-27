@@ -206,8 +206,25 @@ Mapping
     let imageFile = post["image"] as! PFFileObject
       return cell
   }
-  
   ~~~
+  
+  (Read/ Get) Pull images
+  ~~~swift
+  @IBAction func onCameraButton(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            picker.sourceType = .camera
+        } else {
+            picker.sourceType = .photoLibrary
+        }
+        
+        
+        present(picker, animated: true, completion: nil)
+    }
+    ~~~
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
 
