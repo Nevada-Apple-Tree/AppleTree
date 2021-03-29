@@ -136,6 +136,21 @@ Mapping
           //print error
           }
   ```
+- (Create/post) Sign-In
+  ```swift
+  let username = usernameField.text!
+  let password = passwordField.text!
+  
+  PFUser.logInwithUsername(inBackground: username, passwoed: password) {
+    (user, error) in
+      if success {
+        self.performSegue(withIdentifier: "loginSegue", sender: nil)
+        } else {
+            print("Error: \(error?.localizedDescription)")
+        }
+      }
+  }
+  ```
 - (Create/post) Comment
   ```swift
       func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
