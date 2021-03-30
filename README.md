@@ -151,6 +151,41 @@ Mapping
       }
   }
   ```
+-(Update/put) Show location on
+  ```swift
+  let locationManager = CLL ocationManager()
+  
+  func setupLocationManager() {
+    locationManager.delegate = self
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest
+  }
+  
+  func checkLocationServices() {
+    if CLLocationManger.locationServicesEnabled() {
+      setupLocationManager()
+      checkLocationAuthorization()
+    } else {
+      // show alert letting the user know they have to turn this on.
+    }
+    
+    func checkLocationAuthorization() {
+      switch CLLocationManager.authorizationStatus() {
+      case .authorizedWhenInUse:
+        // Do Map stuff
+         break
+     case .denied:
+        // show alert instructing them how to turn on permissions
+        break
+     case .notDetermined:
+      locationManager.requestWhenInUseAuthorization()
+     case .restricted:
+      // show an alert letting them know know whats up
+      break
+     case .authorizedAlways:
+      break
+     }
+  } 
+  ```
 - (Create/post) Comment
   ```swift
       func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
