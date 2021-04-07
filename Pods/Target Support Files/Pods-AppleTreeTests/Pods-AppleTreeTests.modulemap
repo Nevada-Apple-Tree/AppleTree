@@ -1,0 +1,6 @@
+framework module Pods_AppleTreeTests {
+  umbrella header "Pods-AppleTreeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
