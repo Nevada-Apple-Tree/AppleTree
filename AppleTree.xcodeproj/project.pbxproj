@@ -3,14 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		02A56855C30C138EADAFED0F /* Pods_AppleTree_AppleTreeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AAD06F05BA6AF1910A3DCFA /* Pods_AppleTree_AppleTreeUITests.framework */; };
+		873E6B22261D4E2B00D5C284 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873E6B21261D4E2B00D5C284 /* LoginViewController.swift */; };
+		873E6B27261D4EB800D5C284 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873E6B26261D4EB800D5C284 /* FeedViewController.swift */; };
 		879465052616B6150002895B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879465042616B6150002895B /* AppDelegate.swift */; };
 		879465072616B6150002895B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879465062616B6150002895B /* SceneDelegate.swift */; };
-		879465092616B6150002895B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879465082616B6150002895B /* ViewController.swift */; };
 		8794650C2616B6150002895B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8794650A2616B6150002895B /* Main.storyboard */; };
 		8794650E2616B6160002895B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8794650D2616B6160002895B /* Assets.xcassets */; };
 		879465112616B6160002895B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8794650F2616B6160002895B /* LaunchScreen.storyboard */; };
@@ -43,10 +44,11 @@
 		6AAD06F05BA6AF1910A3DCFA /* Pods_AppleTree_AppleTreeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppleTree_AppleTreeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A3EDC5393E30C150F800F1 /* Pods-AppleTreeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleTreeTests.debug.xcconfig"; path = "Target Support Files/Pods-AppleTreeTests/Pods-AppleTreeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		858BFEA6AC7A43E0DCD75AC3 /* Pods-AppleTree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleTree.debug.xcconfig"; path = "Target Support Files/Pods-AppleTree/Pods-AppleTree.debug.xcconfig"; sourceTree = "<group>"; };
+		873E6B21261D4E2B00D5C284 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		873E6B26261D4EB800D5C284 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		879465012616B6150002895B /* AppleTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879465042616B6150002895B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		879465062616B6150002895B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		879465082616B6150002895B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8794650B2616B6150002895B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8794650D2616B6160002895B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		879465102616B6160002895B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -111,7 +113,6 @@
 				83A3EDC5393E30C150F800F1 /* Pods-AppleTreeTests.debug.xcconfig */,
 				892D56106C8D7D778A21541D /* Pods-AppleTreeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -142,11 +143,12 @@
 			children = (
 				879465042616B6150002895B /* AppDelegate.swift */,
 				879465062616B6150002895B /* SceneDelegate.swift */,
-				879465082616B6150002895B /* ViewController.swift */,
 				8794650A2616B6150002895B /* Main.storyboard */,
 				8794650D2616B6160002895B /* Assets.xcassets */,
 				8794650F2616B6160002895B /* LaunchScreen.storyboard */,
 				879465122616B6160002895B /* Info.plist */,
+				873E6B21261D4E2B00D5C284 /* LoginViewController.swift */,
+				873E6B26261D4EB800D5C284 /* FeedViewController.swift */,
 			);
 			path = AppleTree;
 			sourceTree = "<group>";
@@ -407,8 +409,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				879465092616B6150002895B /* ViewController.swift in Sources */,
+				873E6B22261D4E2B00D5C284 /* LoginViewController.swift in Sources */,
 				879465052616B6150002895B /* AppDelegate.swift in Sources */,
+				873E6B27261D4EB800D5C284 /* FeedViewController.swift in Sources */,
 				879465072616B6150002895B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
