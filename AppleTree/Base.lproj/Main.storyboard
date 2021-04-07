@@ -68,11 +68,11 @@
             </objects>
             <point key="canvasLocation" x="-2126" y="2139"/>
         </scene>
-        <!--Item-->
+        <!--Family Feed-->
         <scene sceneID="i28-SG-2IQ">
             <objects>
                 <navigationController id="EkP-6F-6i1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="eMi-xH-d2J"/>
+                    <tabBarItem key="tabBarItem" title="Family Feed" id="eMi-xH-d2J"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="roT-ml-Jsr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -114,11 +114,11 @@
             </objects>
             <point key="canvasLocation" x="-1094" y="2140"/>
         </scene>
-        <!--Item-->
+        <!--Map-->
         <scene sceneID="FiE-cO-UcS">
             <objects>
                 <navigationController id="yM8-dT-2SR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="7mF-RV-4a0"/>
+                    <tabBarItem key="tabBarItem" title="Map" id="7mF-RV-4a0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TFD-Rt-Amp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -180,11 +180,11 @@
             </objects>
             <point key="canvasLocation" x="-543" y="-2"/>
         </scene>
-        <!--Item-->
+        <!--Gallery-->
         <scene sceneID="vxZ-uT-KfV">
             <objects>
                 <navigationController id="wLq-U5-PZm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="q1C-ce-Gmo"/>
+                    <tabBarItem key="tabBarItem" title="Gallery" id="q1C-ce-Gmo"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OMd-Ee-g2r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -226,11 +226,11 @@
             </objects>
             <point key="canvasLocation" x="1132" y="2138"/>
         </scene>
-        <!--Item-->
+        <!--Settings-->
         <scene sceneID="PsK-p0-YmA">
             <objects>
                 <navigationController id="EAa-xt-iYK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="V2V-ad-phJ"/>
+                    <tabBarItem key="tabBarItem" title="Settings" id="V2V-ad-phJ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3ye-Mk-ziL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
