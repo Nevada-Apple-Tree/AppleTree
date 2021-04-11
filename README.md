@@ -275,6 +275,9 @@ Mapping
         present(picker, animated: true, completion: nil)
     }
     ~~~
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+## Build Sprint 1
+- [x] Create a parse import
+- [x] Import parse file
+- [x] Share Xcode file for pulling and pushing
+
 
