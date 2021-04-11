@@ -279,5 +279,10 @@ Mapping
 - [x] Create a parse import
 - [x] Import parse file
 - [x] Share Xcode file for pulling and pushing
-
+- [x] Add labels
+- [x] Text Field
+- [x] Sign in button
+- [x] Sign Up button
+- [x] Link outlets
+- [x]  Create segue
 
