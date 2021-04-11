@@ -284,5 +284,10 @@ Mapping
 - [x] Sign in button
 - [x] Sign Up button
 - [x] Link outlets
-- [x]  Create segue
+- [x] Create segue
+- [x] Make navigation bar with 4 linked views
+- [x] Window for map
+- [x] Window for feed view
+- [x] Window for image gallery
+- [x] Window for settings
 
