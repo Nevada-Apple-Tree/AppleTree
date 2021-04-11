@@ -295,5 +295,5 @@ Mapping
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://g.recordit.co/0Pz10XJkXF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/mevX97P2lD.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
