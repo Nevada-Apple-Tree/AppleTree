@@ -179,18 +179,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nij-1a-9j9">
-                                <rect key="frame" x="167" y="343" width="80" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7S2-jL-qxY">
+                                <rect key="frame" x="0.0" y="56" width="414" height="611"/>
+                            </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GZ8-cM-zWX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7S2-jL-qxY" firstAttribute="leading" secondItem="GZ8-cM-zWX" secondAttribute="leading" id="1Wl-P9-x7d"/>
+                            <constraint firstItem="GZ8-cM-zWX" firstAttribute="trailing" secondItem="7S2-jL-qxY" secondAttribute="trailing" id="WYE-Fr-63D"/>
+                            <constraint firstItem="GZ8-cM-zWX" firstAttribute="bottom" secondItem="7S2-jL-qxY" secondAttribute="bottom" id="n7Y-iS-XXW"/>
+                            <constraint firstItem="7S2-jL-qxY" firstAttribute="top" secondItem="GZ8-cM-zWX" secondAttribute="top" id="vMT-dY-gMB"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Knv-GQ-QwV"/>
+                    <connections>
+                        <outlet property="mapView" destination="7S2-jL-qxY" id="f9C-h0-aqN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U4V-CQ-Pox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
