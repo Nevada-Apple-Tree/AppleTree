@@ -275,6 +275,25 @@ Mapping
         present(picker, animated: true, completion: nil)
     }
     ~~~
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+## Build Sprint 1
+- [x] Create a parse import
+- [x] Import parse file
+- [x] Share Xcode file for pulling and pushing
+- [x] Add labels
+- [x] Text Field
+- [x] Sign in button
+- [x] Sign Up button
+- [x] Link outlets
+- [x] Create segue
+- [x] Make navigation bar with 4 linked views
+- [x] Window for map
+- [x] Window for feed view
+- [x] Window for image gallery
+- [x] Window for settings
+
+## Video Walkthrough Sprint 1
+
+Here's a walkthrough of implemented user stories:
+
+<img src='http://g.recordit.co/mevX97P2lD.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
