@@ -11,6 +11,7 @@
 		870463C626212F5500085419 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870463C526212F5500085419 /* MapViewController.swift */; };
 		870463CB26212F7E00085419 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870463CA26212F7E00085419 /* GalleryViewController.swift */; };
 		870463D026212FA100085419 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870463CF26212FA100085419 /* SettingsViewController.swift */; };
+		870C94FA262931610063D4D2 /* FamilyFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870C94F9262931610063D4D2 /* FamilyFeedCell.swift */; };
 		873E6B22261D4E2B00D5C284 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873E6B21261D4E2B00D5C284 /* LoginViewController.swift */; };
 		873E6B27261D4EB800D5C284 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873E6B26261D4EB800D5C284 /* FeedViewController.swift */; };
 		879465052616B6150002895B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879465042616B6150002895B /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 		870463C526212F5500085419 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		870463CA26212F7E00085419 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		870463CF26212FA100085419 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		870C94F9262931610063D4D2 /* FamilyFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyFeedCell.swift; sourceTree = "<group>"; };
 		873E6B21261D4E2B00D5C284 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		873E6B26261D4EB800D5C284 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		879465012616B6150002895B /* AppleTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +164,7 @@
 				870463C526212F5500085419 /* MapViewController.swift */,
 				870463CA26212F7E00085419 /* GalleryViewController.swift */,
 				870463CF26212FA100085419 /* SettingsViewController.swift */,
+				870C94F9262931610063D4D2 /* FamilyFeedCell.swift */,
 			);
 			path = AppleTree;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				870463D026212FA100085419 /* SettingsViewController.swift in Sources */,
 				873E6B27261D4EB800D5C284 /* FeedViewController.swift in Sources */,
 				870463CB26212F7E00085419 /* GalleryViewController.swift in Sources */,
+				870C94FA262931610063D4D2 /* FamilyFeedCell.swift in Sources */,
 				870463C626212F5500085419 /* MapViewController.swift in Sources */,
 				879465072616B6150002895B /* SceneDelegate.swift in Sources */,
 			);
