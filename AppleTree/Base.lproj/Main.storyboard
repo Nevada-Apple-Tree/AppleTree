@@ -100,7 +100,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <prototypes>
-                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FamilyFeedCell" rowHeight="431" id="56j-T5-8Gb" customClass="FamilyFeedCell" customModule="AppleTree" customModuleProvider="target">
+                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FamilyFeedCell" rowHeight="431" id="56j-T5-8Gb" customClass="FamilyFeedCell" customModule="AppleTree" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="28" width="414" height="431"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="56j-T5-8Gb" id="AmJ-oc-nQD">
@@ -143,6 +143,28 @@
                                                         <outlet property="photoView" destination="MPQ-y6-7Dh" id="jC7-Bh-UDf"/>
                                                         <outlet property="usernameLabel" destination="9Y2-XX-6qr" id="Wqz-Yf-J4x"/>
                                                     </connections>
+                                                </tableViewCell>
+                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ZAZ-TY-Sfy">
+                                                    <rect key="frame" x="0.0" y="459" width="414" height="37.333332061767578"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZAZ-TY-Sfy" id="e8e-Uc-oHX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="37.333332061767578"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CommentUser" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktL-4k-QRH">
+                                                                <rect key="frame" x="16" y="7.9999999999999982" width="390" height="21.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="ktL-4k-QRH" secondAttribute="trailing" constant="8" id="DJT-1k-AV9"/>
+                                                            <constraint firstItem="ktL-4k-QRH" firstAttribute="top" secondItem="e8e-Uc-oHX" secondAttribute="top" constant="8" id="UDV-b9-Xf0"/>
+                                                            <constraint firstAttribute="bottom" secondItem="ktL-4k-QRH" secondAttribute="bottom" constant="8" id="dOg-BE-5he"/>
+                                                            <constraint firstItem="ktL-4k-QRH" firstAttribute="leading" secondItem="e8e-Uc-oHX" secondAttribute="leading" constant="16" id="m8m-Bv-GC6"/>
+                                                        </constraints>
+                                                    </tableViewCellContentView>
                                                 </tableViewCell>
                                             </prototypes>
                                         </tableView>

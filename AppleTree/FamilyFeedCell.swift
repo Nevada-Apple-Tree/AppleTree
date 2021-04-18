@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Parse
+
 
 class FamilyFeedCell: UITableViewCell {
 
