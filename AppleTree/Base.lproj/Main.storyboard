@@ -138,6 +138,11 @@
                                                             <constraint firstItem="MPQ-y6-7Dh" firstAttribute="leading" secondItem="AmJ-oc-nQD" secondAttribute="leading" constant="8" id="y3V-87-T6I"/>
                                                         </constraints>
                                                     </tableViewCellContentView>
+                                                    <connections>
+                                                        <outlet property="captionLabel" destination="Mk0-ti-qgl" id="U4c-9q-BGB"/>
+                                                        <outlet property="photoView" destination="MPQ-y6-7Dh" id="jC7-Bh-UDf"/>
+                                                        <outlet property="usernameLabel" destination="9Y2-XX-6qr" id="Wqz-Yf-J4x"/>
+                                                    </connections>
                                                 </tableViewCell>
                                             </prototypes>
                                         </tableView>
