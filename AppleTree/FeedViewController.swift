@@ -74,6 +74,7 @@ class FeedViewController:  UIViewController, UITableViewDelegate, UITableViewDat
     
     
     @IBOutlet weak var tableView: UITableView!
+    
     let commentBar = MessageInputBar()
     var showsCommentBar = false
     

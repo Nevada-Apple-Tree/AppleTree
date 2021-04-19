@@ -26,7 +26,7 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBAction func onSubmit(_ sender: Any) {
         let post = PFObject(className:  "Posts")
         
-      //  post["caption"] = commentField.text!
+        post["caption"] = textField.text!
         post["author"] = PFUser.current()!
         
         let imageData = galleryImage.image! .pngData()
