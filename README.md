@@ -297,3 +297,19 @@ Here's a walkthrough of implemented user stories:
 
 <img src='http://g.recordit.co/mevX97P2lD.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+## Build Sprint 2
+Adding outlets and page design 
+- [x] Create a view controller for map
+- [x] Create a view controller for family chat
+- [x] Create a view controller for images
+- [x] Create a view controller for settings
+- [x] Image for app icon
+- [x] Loading screen image
+- [x] Login background
+- [x] Tab bar controller icons
+
+## Video Walkthrough Sprint 2
+
+Here's a walkthrough of implemented user stories:
+
+<img src='http://g.recordit.co/mevX97P2lD.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
