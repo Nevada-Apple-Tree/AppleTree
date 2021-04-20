@@ -312,4 +312,4 @@ Adding outlets and page design
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://g.recordit.co/mevX97P2lD.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/QPeCEhzHla.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
