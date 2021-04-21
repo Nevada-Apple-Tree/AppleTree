@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="AppleTree" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="AppleTree" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,7 +84,7 @@
         <!--Feed View Controller-->
         <scene sceneID="EjV-ud-1Ai">
             <objects>
-                <viewController id="jU8-12-ExX" customClass="FeedViewController" customModule="AppleTree" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedViewController" id="jU8-12-ExX" customClass="FeedViewController" customModule="AppleTree" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b0e-fl-iKq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -257,7 +257,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="5wh-w6-O5A">
             <objects>
-                <tabBarController id="2kC-S4-tbz" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="2kC-S4-tbz" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2kb-5m-mU8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -406,6 +406,9 @@
                                 <rect key="frame" x="162" y="481" width="87" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="onLogoutButton:" destination="Dsc-1b-ujh" eventType="touchUpInside" id="lbw-AX-qOR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="adI-S5-taB"/>
