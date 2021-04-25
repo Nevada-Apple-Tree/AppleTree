@@ -17,10 +17,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
 
         // Do any additional setup after loading the view.
     }
-    
     @IBAction func onSignin(_ sender: Any) {
         let username = usernameField.text!
         let password = passwordField.text!
@@ -47,8 +47,13 @@ class LoginViewController: UIViewController {
             } else {
                 print("Error \(error?.localizedDescription)")
             }
-        }    }
-    
+        }
+        
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     /*
     // MARK: - Navigation

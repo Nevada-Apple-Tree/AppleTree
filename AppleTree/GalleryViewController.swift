@@ -23,6 +23,8 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
         // Do any additional setup after loading the view.
     }
     
+   
+    
     @IBAction func onSubmit(_ sender: Any) {
         let post = PFObject(className:  "Posts")
         
@@ -46,18 +48,31 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
 
     @objc func imageTap(_ sender: Any) {
     print("1")
-    let picker = UIImagePickerController()
-    picker.delegate = self
-    picker.allowsEditing = true
-    print("2")
-    if UIImagePickerController.isSourceTypeAvailable(.camera) {
-        picker.sourceType = .camera
-    } else {
-        picker.sourceType = .photoLibrary
-    }
-    print("3")
-        print(picker.sourceType)
-    present(picker, animated: true, completion: nil)
+        let picker = UIImagePickerController()
+        let alert = UIAlertController(title: "Image from Camera or Gallery", message: "Please select either camera or gallery for images.", preferredStyle: UIAlertController.Style.actionSheet)
+        alert.addAction(UIAlertAction(title: "Camera", style: UIAlertAction.Style.default, handler: { (action) in
+            print("Clicked camera")
+            picker.sourceType = .camera
+            picker.delegate = self
+            picker.allowsEditing = true
+            self.present(picker, animated: true, completion: nil)
+            
+        }))
+        alert.addAction(UIAlertAction(title: "Gallery", style: UIAlertAction.Style.default, handler: { (action) in
+            print("Clicked gallery")
+            picker.sourceType = .photoLibrary
+            picker.delegate = self
+            picker.allowsEditing = true
+            self.present(picker, animated: true, completion: nil)
+            
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: { (action) in
+            print("Cancel")
+        }))
+        self.present(alert, animated: true, completion: nil)
+        
+    
+    
 }
 
 func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -70,7 +85,10 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
     
     self.dismiss(animated: true, completion: nil)
 }
-
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
 }
 
 
