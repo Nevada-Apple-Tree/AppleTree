@@ -309,16 +309,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7S2-jL-qxY">
-                                <rect key="frame" x="0.0" y="44" width="414" height="643"/>
+                                <rect key="frame" x="0.0" y="44" width="420" height="643"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWf-LK-3DK">
+                                <rect key="frame" x="110" y="544" width="200" height="34"/>
+                                <color key="backgroundColor" red="0.39893368039999999" green="1" blue="0.37828730490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="1vc-vX-H0w"/>
+                                    <constraint firstAttribute="width" constant="200" id="4iy-lF-8yc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Send Location">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                    <color key="titleShadowColor" red="0.39893368039999999" green="1" blue="0.37828730490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GZ8-cM-zWX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7S2-jL-qxY" firstAttribute="leading" secondItem="GZ8-cM-zWX" secondAttribute="leading" id="1Wl-P9-x7d"/>
+                            <constraint firstItem="mWf-LK-3DK" firstAttribute="leading" secondItem="GZ8-cM-zWX" secondAttribute="leading" constant="110" id="Phn-gi-8yC"/>
+                            <constraint firstItem="mWf-LK-3DK" firstAttribute="top" secondItem="GZ8-cM-zWX" secondAttribute="top" constant="500" id="R1w-oW-Q1V"/>
                             <constraint firstItem="GZ8-cM-zWX" firstAttribute="trailing" secondItem="7S2-jL-qxY" secondAttribute="trailing" id="WYE-Fr-63D"/>
-                            <constraint firstItem="GZ8-cM-zWX" firstAttribute="bottom" secondItem="7S2-jL-qxY" secondAttribute="bottom" id="n7Y-iS-XXW"/>
                             <constraint firstItem="7S2-jL-qxY" firstAttribute="top" secondItem="GZ8-cM-zWX" secondAttribute="top" id="vMT-dY-gMB"/>
+                            <constraint firstItem="GZ8-cM-zWX" firstAttribute="trailing" secondItem="mWf-LK-3DK" secondAttribute="trailing" constant="110" id="whN-ya-T0H"/>
+                            <constraint firstItem="GZ8-cM-zWX" firstAttribute="bottom" secondItem="7S2-jL-qxY" secondAttribute="bottom" id="ynE-Gz-moy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Knv-GQ-QwV"/>
@@ -328,7 +344,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U4V-CQ-Pox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1107" y="2138"/>
+            <point key="canvasLocation" x="-1107.2463768115942" y="2137.5"/>
         </scene>
         <!--Gallery-->
         <scene sceneID="a4n-6f-8g2">
@@ -518,7 +534,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="applelogo" catalog="system" width="103" height="128"/>
+        <image name="applelogo" catalog="system" width="32" height="32"/>
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="house" catalog="system" width="128" height="106"/>
