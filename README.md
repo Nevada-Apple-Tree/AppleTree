@@ -313,3 +313,11 @@ Adding outlets and page design
 Here's a walkthrough of implemented user stories:
 
 <img src='http://g.recordit.co/QPeCEhzHla.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+## Build Sprint 3
+
+## Video Walkthrough Sprint 3
+
+Here's a walkthrough of implemented user stories:
+
+<img src='http://g.recordit.co/QPeCEhzHla.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
