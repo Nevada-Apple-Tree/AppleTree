@@ -81,6 +81,8 @@ class FeedViewController:  UIViewController, UITableViewDelegate, UITableViewDat
     var posts = [PFObject]()
     var selectedPost: PFObject!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
