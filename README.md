@@ -316,6 +316,13 @@ Here's a walkthrough of implemented user stories:
 
 ## Build Sprint 3
 
+- [x] Account stays logged in until logout - MIchael
+- [x] Make pop-up keyboard removable when pushed down - Brayden
+- [x] Code the settings to be able to change user image - Michael
+- [x] Button to get user location - Jonzo
+- [x] Geo code location - Jonzo
+- [x] Option button for camera or stock photos - Brayden
+
 ## Video Walkthrough Sprint 3
 
 Here's a walkthrough of implemented user stories:
