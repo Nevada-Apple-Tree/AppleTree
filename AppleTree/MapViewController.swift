@@ -7,13 +7,11 @@
 
 import UIKit
 import MapKit
+import Parse
 
 class MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
-    
-    //let latitude = r.coordinates["latitude"]!
-   // let longitude = r.coordinates["longitude"]!
     
     let locationManager = CLLocationManager()
     let regionInMeters: Double = 10000
@@ -21,6 +19,31 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationServices()
+    }
+    @IBAction func sendLocationBtnPressed(_ sender: Any) {
+        let current = PFUser.current();
+        let geo = PFGeoPoint()
+        
+        PFGeoPoint.geoPointForCurrentLocation(inBackground: { (PFGeoPoint, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                current!["myLocation"] = PFGeoPoint
+                current?.saveInBackground(block: { (success, error) in
+                    if let error = error{
+                        print(error.localizedDescription);
+                    } else {
+                        print("it worked");
+                    }
+                })
+            }
+        })
+        
+        let query = PFQuery(className: "user");
+        //query.whereKEy("family", equalTo: PFUser.current()?.username)
+        query.findObjectsInBackground { (users, error) in
+            print(users);
+        }
     }
     
     func setupLocationManager() {

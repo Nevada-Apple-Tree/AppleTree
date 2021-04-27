@@ -309,20 +309,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7S2-jL-qxY">
-                                <rect key="frame" x="0.0" y="44" width="420" height="643"/>
+                                <rect key="frame" x="0.0" y="44" width="343" height="643"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWf-LK-3DK">
-                                <rect key="frame" x="110" y="544" width="200" height="34"/>
+                                <rect key="frame" x="110" y="544" width="123" height="34"/>
                                 <color key="backgroundColor" red="0.39893368039999999" green="1" blue="0.37828730490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="1vc-vX-H0w"/>
-                                    <constraint firstAttribute="width" constant="200" id="4iy-lF-8yc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Send Location">
                                     <color key="titleColor" systemColor="labelColor"/>
                                     <color key="titleShadowColor" red="0.39893368039999999" green="1" blue="0.37828730490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendLocationBtnPressed:" destination="1SC-UJ-xOD" eventType="touchUpInside" id="RLY-qT-xdM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GZ8-cM-zWX"/>
