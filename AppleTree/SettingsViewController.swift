@@ -11,11 +11,31 @@ import Parse
 class SettingsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var fontSizeLabel: UILabel!
+    @IBOutlet weak var fontSizeNumber: UILabel!
+    @IBOutlet weak var notificationLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var treeIDLabel: UILabel!
+    
+    
+    
+    @IBOutlet weak var stepper: UIStepper!
+    
+    @IBAction func fontSizeStepper(_ sender: UIStepper) {
+        fontSizeNumber.text = Int(sender.value).description
+        
+        globalsettingsvalues.globalfontsize = Int(sender.value)
+        fontSizeLabel.font = fontSizeLabel.font.withSize(CGFloat(globalsettingsvalues.globalfontsize))
+        notificationLabel.font = fontSizeLabel.font.withSize(CGFloat(globalsettingsvalues.globalfontsize))
+        locationLabel.font = fontSizeLabel.font.withSize(CGFloat(globalsettingsvalues.globalfontsize))
+        treeIDLabel.font = fontSizeLabel.font.withSize(CGFloat(globalsettingsvalues.globalfontsize))
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        stepper.value = 17
         // Do any additional setup after loading the view.
     }
     

@@ -309,10 +309,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7S2-jL-qxY">
-                                <rect key="frame" x="0.0" y="44" width="343" height="643"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="643"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWf-LK-3DK">
-                                <rect key="frame" x="110" y="544" width="123" height="34"/>
+                                <rect key="frame" x="110" y="544" width="194" height="34"/>
                                 <color key="backgroundColor" red="0.39893368039999999" green="1" blue="0.37828730490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="1vc-vX-H0w"/>
@@ -376,7 +376,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ner-l3-tch">
-                                <rect key="frame" x="165" y="199" width="84" height="21"/>
+                                <rect key="frame" x="59" y="191" width="284" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -392,29 +392,32 @@
                                 </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Font Size" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7n-Bf-38h">
-                                <rect key="frame" x="31" y="232" width="71" height="21"/>
+                                <rect key="frame" x="31" y="232" width="189" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notification Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LH-L2-x1x">
-                                <rect key="frame" x="33" y="315" width="149" height="21"/>
+                                <rect key="frame" x="33" y="309" width="187" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="tst-7w-vdq">
-                                <rect key="frame" x="231" y="232" width="94" height="32"/>
+                                <rect key="frame" x="240" y="238" width="94" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="fontSizeStepper:" destination="Dsc-1b-ujh" eventType="valueChanged" id="R8s-M6-mik"/>
+                                </connections>
                             </stepper>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="5tm-8Q-m7l">
                                 <rect key="frame" x="231" y="309" width="94" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="17" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bN-j3-XKs">
-                                <rect key="frame" x="342" y="232" width="52" height="21"/>
+                                <rect key="frame" x="342" y="244" width="52" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -428,7 +431,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4f-4w-uvf">
-                                <rect key="frame" x="33" y="390" width="66" height="21"/>
+                                <rect key="frame" x="33" y="374" width="187" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -439,7 +442,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tree ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QW6-3r-Dk9">
-                                <rect key="frame" x="39" y="447" width="54" height="21"/>
+                                <rect key="frame" x="33" y="440" width="187" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -452,7 +455,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLc-tW-BFb">
-                                <rect key="frame" x="162" y="481" width="87" height="30"/>
+                                <rect key="frame" x="91" y="506" width="173" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
@@ -465,6 +468,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="ot8-72-xuN"/>
                     <connections>
+                        <outlet property="fontSizeLabel" destination="r7n-Bf-38h" id="g7D-U6-cyv"/>
+                        <outlet property="fontSizeNumber" destination="1bN-j3-XKs" id="YoF-ON-300"/>
+                        <outlet property="locationLabel" destination="i4f-4w-uvf" id="Vv8-cd-2or"/>
+                        <outlet property="notificationLabel" destination="9LH-L2-x1x" id="MdO-xd-pPU"/>
+                        <outlet property="stepper" destination="tst-7w-vdq" id="IDj-Fu-zAg"/>
+                        <outlet property="treeIDLabel" destination="QW6-3r-Dk9" id="07G-pj-gNP"/>
                         <outlet property="userImage" destination="Esc-7p-e2F" id="GlO-nU-203"/>
                     </connections>
                 </viewController>
@@ -536,7 +545,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="applelogo" catalog="system" width="32" height="32"/>
+        <image name="applelogo" catalog="system" width="103" height="128"/>
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="house" catalog="system" width="128" height="106"/>

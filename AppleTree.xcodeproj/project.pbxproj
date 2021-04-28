@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02A56855C30C138EADAFED0F /* Pods_AppleTree_AppleTreeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AAD06F05BA6AF1910A3DCFA /* Pods_AppleTree_AppleTreeUITests.framework */; };
+		1D903E6B2638F95E00E07521 /* SettingsValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D903E6A2638F95E00E07521 /* SettingsValues.swift */; };
 		870463C626212F5500085419 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870463C526212F5500085419 /* MapViewController.swift */; };
 		870463CB26212F7E00085419 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870463CA26212F7E00085419 /* GalleryViewController.swift */; };
 		870463D026212FA100085419 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870463CF26212FA100085419 /* SettingsViewController.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		17475DC87FFD24762E64F775 /* Pods_AppleTreeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppleTreeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D903E6A2638F95E00E07521 /* SettingsValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsValues.swift; sourceTree = "<group>"; };
 		27291AB249F7CC4A81360166 /* Pods_AppleTree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppleTree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AAD06F05BA6AF1910A3DCFA /* Pods_AppleTree_AppleTreeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppleTree_AppleTreeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A3EDC5393E30C150F800F1 /* Pods-AppleTreeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleTreeTests.debug.xcconfig"; path = "Target Support Files/Pods-AppleTreeTests/Pods-AppleTreeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				870463CF26212FA100085419 /* SettingsViewController.swift */,
 				870C94F9262931610063D4D2 /* FamilyFeedCell.swift */,
 				87E95F81262D3AC8000DE964 /* CommentCell.swift */,
+				1D903E6A2638F95E00E07521 /* SettingsValues.swift */,
 			);
 			path = AppleTree;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 			files = (
 				873E6B22261D4E2B00D5C284 /* LoginViewController.swift in Sources */,
 				879465052616B6150002895B /* AppDelegate.swift in Sources */,
+				1D903E6B2638F95E00E07521 /* SettingsValues.swift in Sources */,
 				870463D026212FA100085419 /* SettingsViewController.swift in Sources */,
 				873E6B27261D4EB800D5C284 /* FeedViewController.swift in Sources */,
 				870463CB26212F7E00085419 /* GalleryViewController.swift in Sources */,
