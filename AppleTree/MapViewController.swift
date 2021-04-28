@@ -9,12 +9,13 @@ import UIKit
 import MapKit
 import Parse
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     
     let locationManager = CLLocationManager()
     let regionInMeters: Double = 10000
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,8 @@ class MapViewController: UIViewController {
     @IBAction func sendLocationBtnPressed(_ sender: Any) {
         let current = PFUser.current();
         let geo = PFGeoPoint()
+        
+        
         
         PFGeoPoint.geoPointForCurrentLocation(inBackground: { (PFGeoPoint, error) in
             if let error = error {
@@ -45,6 +48,9 @@ class MapViewController: UIViewController {
             print(users);
         }
     }
+    ///
+   
+    ///
     
     func setupLocationManager() {
         locationManager.delegate = self
