@@ -43,8 +43,13 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
                 print("error!")
             }
         }
+        
+        func viewWillDisappear(_ animated: Bool) {
+            super.viewWillDisappear(true)
+        }
     }
-
+    
+    
 
     @objc func imageTap(_ sender: Any) {
     print("1")
