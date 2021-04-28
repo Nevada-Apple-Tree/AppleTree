@@ -44,9 +44,7 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
             }
         }
         
-        func viewWillDisappear(_ animated: Bool) {
-            super.viewWillDisappear(true)
-        }
+      
     }
     
     
@@ -94,6 +92,7 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
         self.view.endEditing(true)
     }
     
+  
 }
 
 

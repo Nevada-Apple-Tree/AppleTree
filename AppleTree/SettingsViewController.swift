@@ -11,11 +11,36 @@ import Parse
 class SettingsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var fontSizeLabel: UILabel!
+    @IBOutlet weak var fontSizeNumber: UILabel!
+    @IBOutlet weak var notificationLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var treeIDLabel: UILabel!
+    
+    
+    
+    @IBOutlet weak var stepper: UIStepper!
+    
+    @IBAction func fontSizeStepper(_ sender: UIStepper) {
+        fontSizeNumber.text = Int(sender.value).description
+        
+        globalsettingsvalues.globalfontsize = Int(sender.value)
+        fontSizeLabel.font = fontSizeLabel.font.withSize(CGFloat(globalsettingsvalues.globalfontsize))
+        notificationLabel.font = fontSizeLabel.font.withSize(CGFloat(globalsettingsvalues.globalfontsize))
+        locationLabel.font = fontSizeLabel.font.withSize(CGFloat(globalsettingsvalues.globalfontsize))
+        treeIDLabel.font = fontSizeLabel.font.withSize(CGFloat(globalsettingsvalues.globalfontsize))
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
+        let imageFile = PFUser.current()!["ProfilePic"] as! PFFileObject
+        let urlString = imageFile.url!
+        let url = URL(string: urlString)!
+        
+        userImage.af.setImage(withURL: url)
+        stepper.value = 17
         // Do any additional setup after loading the view.
     }
     
@@ -43,6 +68,7 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         }
         
         present(picker, animated: true, completion: nil)
+        
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -53,9 +79,21 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         
         userImage.image = image
         
+        let imageData = userImage.image! .pngData()
+        let file = PFFileObject(name: "image.png", data: imageData!)
+        PFUser.current()!["ProfilePic"] = file
+        PFUser.current()?.saveInBackground(block: { (success, error) in
+            if let error = error{
+                print(error.localizedDescription)
+            } else {
+                print("success")
+            }
+        })
         dismiss(animated: true, completion: nil)
     }
     
+   
+        
     /*
     // MARK: - Navigation
 
