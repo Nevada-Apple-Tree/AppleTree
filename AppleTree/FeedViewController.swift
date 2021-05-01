@@ -31,9 +31,17 @@ class FeedViewController:  UIViewController, UITableViewDelegate, UITableViewDat
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyFeedCell") as! FamilyFeedCell
         let user = post["author"] as! PFUser
+        print(user)
         cell.usernameLabel.text = user.username
         
-        cell.captionLabel.text = post["caption"] as! String
+            if let profileImage = user["ProfilePic"] as? PFFileObject {
+                let urlString = profileImage.url!
+                let url = URL(string: urlString)!
+                cell.mainUserProfile.af.setImage(withURL: url)
+            
+            }
+            
+                cell.captionLabel.text = post["caption"] as! String
         
         let imageFile = post["image"] as! PFFileObject
         let urlString = imageFile.url!

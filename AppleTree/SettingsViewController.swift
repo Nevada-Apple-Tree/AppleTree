@@ -21,6 +21,7 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var groupIdsList: UILabel!
     
     
+    @IBOutlet weak var UsernameLabel: UILabel!
     
     @IBOutlet weak var stepper: UIStepper!
     
@@ -49,15 +50,12 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
             groupIdsList.text = groupids.joined(separator: ", ")
         }
         
-        let Username = PFUser.current()!["username"] as! PFUser
-        self.Username.text = Username.username
+     
+        self.UsernameLabel.text = PFUser.current()!.username
         
-    
-        let imageFile = PFUser.current()!["ProfilePic"] as! PFFileObject
-        let urlString = imageFile.url!
-        let url = URL(string: urlString)!
         
-        userImage.af.setImage(withURL: url)
+        
+       
         stepper.value = 17
         // Do any additional setup after loading the view.
     }

@@ -22,14 +22,10 @@ class FamilyFeedCell: UITableViewCell,UIImagePickerControllerDelegate, UINavigat
     //Checks if user has a prifile image
     override func layoutSubviews() {
         super.layoutSubviews()
-        //if (mainUserProfile != nil){
-        //let imageFile = PFUser()["ProfilePic"] as! PFFileObject
-        //let urlString = imageFile.url!
-        //let url = URL(string: urlString)!
-        //mainUserProfile.af.setImage(withURL: url)
-        //} else {
-          
-        //}
+        
+            mainUserProfile.layer.cornerRadius = 25
+            mainUserProfile.clipsToBounds = true
+            
     }
     
     override func awakeFromNib() {
