@@ -16,6 +16,9 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var notificationLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var treeIDLabel: UILabel!
+    @IBOutlet weak var treeIdField: UITextField!
+    @IBOutlet weak var addIdButton: UIButton!
+    @IBOutlet weak var groupIdsList: UILabel!
     
     
     
@@ -34,13 +37,18 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        let imageFile = PFUser.current()!["ProfilePic"] as! PFFileObject
-        let urlString = imageFile.url!
-        let url = URL(string: urlString)!
         
-        userImage.af.setImage(withURL: url)
-        stepper.value = 17
+        if let profileImage = PFUser.current()!["ProfilePic"] as? PFFileObject {
+            let urlString = profileImage.url!
+            let url = URL(string: urlString)!
+        
+            userImage.af.setImage(withURL: url)
+        }
+            stepper.value = 17
+        if let groupids = PFUser.current()!["groupids"] as? [String] {
+            groupIdsList.text = groupids.joined(separator: ", ")
+        }
+        
         // Do any additional setup after loading the view.
     }
     
@@ -92,7 +100,25 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         dismiss(animated: true, completion: nil)
     }
     
-   
+    @IBAction func addIdButton(_ sender: Any) {
+        var groupids = PFUser.current()!["groupids"] as! [String]
+        if let text = treeIdField.text {
+            groupids.append(text)
+            
+        PFUser.current()!["groupids"] = groupids
+        PFUser.current()?.saveInBackground(block: { (success, error) in
+            if let error = error {
+                print (error.localizedDescription)
+            } else {
+                self.groupIdsList.text?.append(", "+text)
+                self.treeIdField.resignFirstResponder()
+                self.treeIdField.text = ""
+            }
+        })
+            
+        }
+    }
+    
         
     /*
     // MARK: - Navigation

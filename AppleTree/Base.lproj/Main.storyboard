@@ -462,6 +462,21 @@
                                     <action selector="onLogoutButton:" destination="Dsc-1b-ujh" eventType="touchUpInside" id="lbw-AX-qOR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRa-n2-Ndw">
+                                <rect key="frame" x="364" y="442" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addIdButton:" destination="Dsc-1b-ujh" eventType="touchUpInside" id="cto-05-kZA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ak-st-b86">
+                                <rect key="frame" x="31" y="481" width="363" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="adI-S5-taB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -470,12 +485,15 @@
                     <navigationItem key="navigationItem" id="ot8-72-xuN"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addIdButton" destination="pRa-n2-Ndw" id="DCr-oC-QHJ"/>
                         <outlet property="fontSizeLabel" destination="r7n-Bf-38h" id="g7D-U6-cyv"/>
                         <outlet property="fontSizeNumber" destination="1bN-j3-XKs" id="YoF-ON-300"/>
+                        <outlet property="groupIdsList" destination="5Ak-st-b86" id="wsA-HZ-9Ly"/>
                         <outlet property="locationLabel" destination="i4f-4w-uvf" id="Vv8-cd-2or"/>
                         <outlet property="notificationLabel" destination="9LH-L2-x1x" id="MdO-xd-pPU"/>
                         <outlet property="stepper" destination="tst-7w-vdq" id="IDj-Fu-zAg"/>
                         <outlet property="treeIDLabel" destination="QW6-3r-Dk9" id="07G-pj-gNP"/>
+                        <outlet property="treeIdField" destination="xgu-UK-hIZ" id="vSo-TF-BJb"/>
                         <outlet property="userImage" destination="Esc-7p-e2F" id="GlO-nU-203"/>
                     </connections>
                 </viewController>
