@@ -470,6 +470,7 @@
                     <navigationItem key="navigationItem" id="ot8-72-xuN"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="Username" destination="Ner-l3-tch" id="WjM-8B-0oL"/>
                         <outlet property="fontSizeLabel" destination="r7n-Bf-38h" id="g7D-U6-cyv"/>
                         <outlet property="fontSizeNumber" destination="1bN-j3-XKs" id="YoF-ON-300"/>
                         <outlet property="locationLabel" destination="i4f-4w-uvf" id="Vv8-cd-2or"/>

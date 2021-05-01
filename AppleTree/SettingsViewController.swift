@@ -17,6 +17,7 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var treeIDLabel: UILabel!
     
+    @IBOutlet weak var Username: UILabel!
     
     
     @IBOutlet weak var stepper: UIStepper!
@@ -34,6 +35,9 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let Username = PFUser.current()!["username"] as! PFUser
+        self.Username.text = Username.username
+        
     
         let imageFile = PFUser.current()!["ProfilePic"] as! PFFileObject
         let urlString = imageFile.url!

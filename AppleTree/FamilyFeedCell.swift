@@ -9,16 +9,32 @@ import UIKit
 import Parse
 
 
-class FamilyFeedCell: UITableViewCell {
+class FamilyFeedCell: UITableViewCell,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    //Posed image, author, and comment
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
     
+    //User profile image
     @IBOutlet weak var mainUserProfile: UIImageView!
+    
+    //Checks if user has a prifile image
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        //if (mainUserProfile != nil){
+        //let imageFile = PFUser()["ProfilePic"] as! PFFileObject
+        //let urlString = imageFile.url!
+        //let url = URL(string: urlString)!
+        //mainUserProfile.af.setImage(withURL: url)
+        //} else {
+          
+        //}
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
     }
 
