@@ -138,7 +138,7 @@ class FeedViewController:  UIViewController, UITableViewDelegate, UITableViewDat
         let query = PFQuery(className: "Posts")
         query.includeKeys( ["author", "comments", "comments.author"] )
         query.limit = 20
-        
+        query.order(byDescending: "createdAt")
         query.findObjectsInBackground { (posts, error) in
             if posts != nil {
                 self.posts = posts!

@@ -109,7 +109,7 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     @IBAction func addIdButton(_ sender: Any) {
-        var groupids = PFUser.current()!["groupids"] as! [String]
+        var groupids = PFUser.current()!["groupids"] as? [String] ?? []
         if let text = treeIdField.text {
             groupids.append(text)
             
@@ -127,7 +127,9 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         }
     }
     
-        
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     /*
     // MARK: - Navigation
 
