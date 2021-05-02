@@ -16,6 +16,13 @@ class CommentCell: UITableViewCell {
     
     @IBOutlet weak var commentUserProfile: UIImageView!
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+            commentUserProfile.layer.cornerRadius = 25
+            commentUserProfile.clipsToBounds = true
+            
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

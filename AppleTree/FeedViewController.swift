@@ -39,6 +39,8 @@ class FeedViewController:  UIViewController, UITableViewDelegate, UITableViewDat
                 let url = URL(string: urlString)!
                 cell.mainUserProfile.af.setImage(withURL: url)
             
+            } else {
+                cell.mainUserProfile.image = UIImage(named: "default-user")
             }
             
                 cell.captionLabel.text = post["caption"] as! String
@@ -57,6 +59,16 @@ class FeedViewController:  UIViewController, UITableViewDelegate, UITableViewDat
             
             let user = comment["author"] as! PFUser
             cell.nameLabel.text = user.username
+            
+            if let profileImage = user["ProfilePic"] as? PFFileObject {
+                let urlString = profileImage.url!
+                let url = URL(string: urlString)!
+                cell.commentUserProfile.af.setImage(withURL: url)
+            
+            } else {
+                cell.commentUserProfile.image = UIImage(named: "default-user")
+            }
+
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell")!
