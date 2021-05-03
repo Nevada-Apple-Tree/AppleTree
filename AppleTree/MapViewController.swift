@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 import Parse
 
-class MapViewController: UIViewController, MKMapViewDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate{
 
     @IBOutlet weak var mapView: MKMapView!
     
@@ -25,13 +25,13 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let current = PFUser.current();
         let geo = PFGeoPoint()
         
-        
-        
+    
         PFGeoPoint.geoPointForCurrentLocation(inBackground: { (PFGeoPoint, error) in
             if let error = error {
                 print(error.localizedDescription)
             } else {
                 current!["myLocation"] = PFGeoPoint
+                
                 current?.saveInBackground(block: { (success, error) in
                     if let error = error{
                         print(error.localizedDescription);
@@ -98,15 +98,40 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             break
         }
     }
-}
 
 
-extension MapViewController: CLLocationManagerDelegate {
+
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        
         guard let location = locations.last else { return}
         let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+        
+        // 5 instantiate annotation object to show pin on map
+        let newPin = MKPointAnnotation()
+        //removes the last pin
+        mapView.removeAnnotation(newPin)
+        // set region on the map
         mapView.setRegion(region, animated: true)
+        
+        // adds a new pin
+        newPin.coordinate = location.coordinate
+        newPin.title = "Current location"
+        newPin.subtitle = "Las Vegas"
+        mapView.addAnnotation(newPin)
+    }
+    
+    let profileImage = PFUser.current()?["ProfilePic"] as? PFFileObject
+    
+    func mapView(_ mapView: MKMapView, viewFor newPin: MKAnnotation) -> MKAnnotationView? {
+        guard !(newPin is MKUserLocation) else {
+            let newPinView = MKPinAnnotationView(annotation: newPin, reuseIdentifier: "userLocation")
+            newPinView.image = UIImage(named: "profileImage")
+            return newPinView
+        
+        }
+        return nil
     }
     //whenever the authorization changes it runs through the switch statement
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
