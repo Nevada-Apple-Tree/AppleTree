@@ -348,4 +348,4 @@ Here's a walkthrough of implemented user stories:
 
 ## Video Walkthrough Sprint 4 Final
 
-<img src='http://g.recordit.co/6e6oHqOeke.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/2akJmpRONU.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
