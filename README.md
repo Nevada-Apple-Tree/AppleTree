@@ -328,3 +328,24 @@ Here's a walkthrough of implemented user stories:
 Here's a walkthrough of implemented user stories:
 
 <img src='http://g.recordit.co/6e6oHqOeke.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+## Build Sprint 4 Final
+
+- [x] Sign up makes a new user
+- [x] Sign in logs in the user if they have an account
+- [x] Post to family feed and shows old posts
+- [x] Navigation bar changes to the right window
+- [x] Can switch between different views
+- [x] Image gallery loads photos and camera can be used to take new image
+- [x] Settings shows current user 
+- [x] Can edit user picture
+- [x] Log out button logs out user to sign in
+- [x] Constraints 
+- [x] User profile picture and comment user picture next to post/comment
+- [x] Generated group code
+- [x] Color Scheme
+- [x] Text size button works
+
+## Video Walkthrough Sprint 4 Final
+
+<img src='http://g.recordit.co/6e6oHqOeke.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
