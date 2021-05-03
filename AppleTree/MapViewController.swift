@@ -117,6 +117,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         // adds a new pin
         newPin.coordinate = location.coordinate
+        
+        //
+        // where it says current location I should have the username be there
+        //
         newPin.title = "Current location"
         newPin.subtitle = "Las Vegas"
         mapView.addAnnotation(newPin)
@@ -127,6 +131,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func mapView(_ mapView: MKMapView, viewFor newPin: MKAnnotation) -> MKAnnotationView? {
         guard !(newPin is MKUserLocation) else {
             let newPinView = MKPinAnnotationView(annotation: newPin, reuseIdentifier: "userLocation")
+            //
+            // where is says profileImage I should put the users profile pic there
+            //
             newPinView.image = UIImage(named: "profileImage")
             return newPinView
         
