@@ -37,7 +37,9 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
         post["image"] = file
         post.saveInBackground { (success, error) in
             if success {
-                self.dismiss(animated: true, completion: nil)
+                self.galleryImage.image = UIImage(systemName: "camera")
+                self.textField.text = ""
+                self.textField.resignFirstResponder()
                 print("Saved!")
             } else {
                 print("error!")

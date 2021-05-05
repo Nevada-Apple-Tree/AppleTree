@@ -48,6 +48,8 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
             stepper.value = 17
         if let groupids = PFUser.current()!["groupids"] as? [String] {
             groupIdsList.text = groupids.joined(separator: ", ")
+        } else {
+            groupIdsList.text = ""
         }
         
      
@@ -118,9 +120,14 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
             if let error = error {
                 print (error.localizedDescription)
             } else {
+                if self.groupIdsList.text!.isEmpty {
+                self.groupIdsList.text?.append(text)
+                } else {
                 self.groupIdsList.text?.append(", "+text)
+                }
                 self.treeIdField.resignFirstResponder()
                 self.treeIdField.text = ""
+                
             }
         })
             
