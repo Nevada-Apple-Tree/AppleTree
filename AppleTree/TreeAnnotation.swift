@@ -14,7 +14,7 @@ class TreeAnnotation: MKPointAnnotation {
     var imageView: UIImageView
     
     init(user: PFUser) {
-        familyMember = user;
+        familyMember = user
         self.imageView = UIImageView()
         super.init()
         self.title = user.username

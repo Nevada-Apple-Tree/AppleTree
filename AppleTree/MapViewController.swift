@@ -8,6 +8,8 @@
 import UIKit
 import MapKit
 import Parse
+import Alamofire
+import AlamofireImage
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate{
 
@@ -15,14 +17,19 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     let locationManager = CLLocationManager()
     let regionInMeters: Double = 10000
+    var users = [PFUser]()
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapView.delegate = self
         checkLocationServices()
+        self.getUsers()
     }
+    
     @IBAction func sendLocationBtnPressed(_ sender: Any) {
-        let current = PFUser.current();
+        let current = PFUser.current()
         let geo = PFGeoPoint()
         
     
@@ -42,14 +49,28 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             }
         })
         
-        let query = PFQuery(className: "user");
-        //query.whereKEy("family", equalTo: PFUser.current()?.username)
-        query.findObjectsInBackground { (users, error) in
-            print(users);
-        }
+        
+    
     }
     ///
-   
+    func getUsers() {
+        let query = PFUser.query()
+        query?.includeKey("profileImage")
+        query?.findObjectsInBackground(block: { objects, error in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                self.users = objects as! [PFUser]
+                var annos  = [MKAnnotation]()
+                for user in self.users {
+                    let newAnno = TreeAnnotation(user: user)
+                    annos.append(newAnno)
+                }
+                self.mapView.removeAnnotations(self.mapView.annotations)
+                self.mapView.addAnnotations(annos)
+            }
+        })
+    }
     ///
     
     func setupLocationManager() {
@@ -108,8 +129,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
         
-        // 5 instantiate annotation object to show pin on map
-        let newPin = MKPointAnnotation()
+        // 5 instantitate annotation object to show pin on map
+        let newPin = TreeAnnotation(user: PFUser.current()!)
         //removes the last pin
         mapView.removeAnnotation(newPin)
         // set region on the map
@@ -121,24 +142,20 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         //
         // where it says current location I should have the username be there
         //
-        newPin.title = "Current location"
-        newPin.subtitle = "Las Vegas"
+        newPin.title = "YOU"
+        //newPin.subtitle = "Las Vegas"
         mapView.addAnnotation(newPin)
     }
     
-    let profileImage = PFUser.current()?["ProfilePic"] as? PFFileObject
-    
-    func mapView(_ mapView: MKMapView, viewFor newPin: MKAnnotation) -> MKAnnotationView? {
-        guard !(newPin is MKUserLocation) else {
-            let newPinView = MKPinAnnotationView(annotation: newPin, reuseIdentifier: "userLocation")
-            //
-            // where is says profileImage I should put the users profile pic there
-            //
-            newPinView.image = UIImage(named: "profileImage")
-            return newPinView
-        
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let newPinView = MKAnnotationView(annotation: annotation, reuseIdentifier: "userLocation")
+        if let treeAnno = annotation as? TreeAnnotation {
+            if let image = treeAnno.imageView.image {
+                newPinView.image = image.af.imageAspectScaled(toFit: CGSize(width: 40, height: 40), scale: 1.0)
+            }
         }
-        return nil
+        newPinView.canShowCallout = true
+        return newPinView
     }
     //whenever the authorization changes it runs through the switch statement
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
