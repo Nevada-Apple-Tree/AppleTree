@@ -77,7 +77,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:
-            mapView.showsUserLocation = true  // this line of code shows blue dot for user location i can also go to map view and toggle it on and off
+            //mapView.showsUserLocation = true  // this line of code shows blue dot for user location i can also go to map view and toggle it on and off
             centerViewOnUserLocation()
             // updates user location to show when user is moving
             locationManager.startUpdatingLocation()

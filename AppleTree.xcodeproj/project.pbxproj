@@ -23,6 +23,7 @@
 		8794651C2616B6170002895B /* AppleTreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8794651B2616B6170002895B /* AppleTreeTests.swift */; };
 		879465272616B6170002895B /* AppleTreeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879465262616B6170002895B /* AppleTreeUITests.swift */; };
 		87E95F82262D3AC8000DE964 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E95F81262D3AC8000DE964 /* CommentCell.swift */; };
+		C4CDAFB72644CB4000E402DF /* TreeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CDAFB62644CB4000E402DF /* TreeAnnotation.swift */; };
 		C4F6F76E262684D100CCEE51 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F6F76D262684D100CCEE51 /* MapKit.framework */; };
 		ED778D67B83C5274FD169CD0 /* Pods_AppleTreeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17475DC87FFD24762E64F775 /* Pods_AppleTreeTests.framework */; };
 		F3DD33C9C7B3ADCAF417BA22 /* Pods_AppleTree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27291AB249F7CC4A81360166 /* Pods_AppleTree.framework */; };
@@ -74,6 +75,7 @@
 		87E95F81262D3AC8000DE964 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		892D56106C8D7D778A21541D /* Pods-AppleTreeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleTreeTests.release.xcconfig"; path = "Target Support Files/Pods-AppleTreeTests/Pods-AppleTreeTests.release.xcconfig"; sourceTree = "<group>"; };
 		984959A109BA0B57E0A45DC7 /* Pods-AppleTree-AppleTreeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleTree-AppleTreeUITests.debug.xcconfig"; path = "Target Support Files/Pods-AppleTree-AppleTreeUITests/Pods-AppleTree-AppleTreeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C4CDAFB62644CB4000E402DF /* TreeAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeAnnotation.swift; sourceTree = "<group>"; };
 		C4F6F76D262684D100CCEE51 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DDE8A57D5E8B501D24D45B12 /* Pods-AppleTree-AppleTreeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleTree-AppleTreeUITests.release.xcconfig"; path = "Target Support Files/Pods-AppleTree-AppleTreeUITests/Pods-AppleTree-AppleTreeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E5174873793EEDFD4E2C0032 /* Pods-AppleTree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleTree.release.xcconfig"; path = "Target Support Files/Pods-AppleTree/Pods-AppleTree.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				870C94F9262931610063D4D2 /* FamilyFeedCell.swift */,
 				87E95F81262D3AC8000DE964 /* CommentCell.swift */,
 				1D903E6A2638F95E00E07521 /* SettingsValues.swift */,
+				C4CDAFB62644CB4000E402DF /* TreeAnnotation.swift */,
 			);
 			path = AppleTree;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				870C94FA262931610063D4D2 /* FamilyFeedCell.swift in Sources */,
 				870463C626212F5500085419 /* MapViewController.swift in Sources */,
 				879465072616B6150002895B /* SceneDelegate.swift in Sources */,
+				C4CDAFB72644CB4000E402DF /* TreeAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
