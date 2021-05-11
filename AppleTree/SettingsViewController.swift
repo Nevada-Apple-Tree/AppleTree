@@ -76,32 +76,19 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
     
     @IBAction func changeUserImage(_ sender: Any) {
         let picker = UIImagePickerController()
-        let alert = UIAlertController(title: "Image from Camera or Gallery", message: "Please select either camera or gallery for images.", preferredStyle: UIAlertController.Style.actionSheet)
-        alert.addAction(UIAlertAction(title: "Camera", style: UIAlertAction.Style.default, handler: { (action) in
-            print("Clicked camera")
+        picker.delegate = self
+        picker.allowsEditing = true
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
             picker.sourceType = .camera
-            picker.delegate = self
-            picker.allowsEditing = true
-            self.present(picker, animated: true, completion: nil)
             
-        }))
-        alert.addAction(UIAlertAction(title: "Gallery", style: UIAlertAction.Style.default, handler: { (action) in
-            print("Clicked gallery")
+        } else {
             picker.sourceType = .photoLibrary
-            picker.delegate = self
-            picker.allowsEditing = true
-            self.present(picker, animated: true, completion: nil)
             
-        }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: { (action) in
-            print("Cancel")
-        }))
-        self.present(alert, animated: true, completion: nil)
+        }
         
-    
-    
-}
-
+        present(picker, animated: true, completion: nil)
+        
+    }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.editedImage] as! UIImage
